@@ -1,0 +1,142 @@
+{
+  "baseline": {
+    "elf": ".work/baseline/build/heartgold.us/main.nef",
+    "infinite": false,
+    "cases": [
+      {
+        "quantity": 1,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 3,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 3,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 3,
+        "passed": true
+      }
+    ],
+    "hm_preserved": true,
+    "no_item_preserved": true,
+    "repeated_20": false,
+    "limitations": "External Pokemon/PP/metadata/friendship services mocked; no UI or save coverage."
+  },
+  "modified": {
+    "elf": ".work/tm-wip/build/heartgold.us/main.nef",
+    "infinite": true,
+    "cases": [
+      {
+        "quantity": 1,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 1,
+        "slot": 3,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 2,
+        "slot": 3,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 0,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 1,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 2,
+        "passed": true
+      },
+      {
+        "quantity": 99,
+        "slot": 3,
+        "passed": true
+      }
+    ],
+    "hm_preserved": true,
+    "no_item_preserved": true,
+    "repeated_20": true,
+    "limitations": "External Pokemon/PP/metadata/friendship services mocked; no UI or save coverage."
+  }
+}

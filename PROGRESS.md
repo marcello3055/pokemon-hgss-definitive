@@ -6,7 +6,7 @@ Repositório privado: https://github.com/marcello3055/pokemon-hgss-definitive
 Acesso de leitura e escrita confirmado. Primeiro envio remoto: d5bd81fdd8583ccf03080dc856db3e8a170bb65e.
 
 TMs infinitas: compilação e recuperação do patch confirmadas; comparação binária
-aprovada em 08/11/2026. Testes ARM anteriores passaram (histórico). Ainda WIP,
+aprovada em 08/11/2026. Testes ARM novamente executados e aprovados em 08/11/2026. Ainda WIP,
 sem validação completa pela interface. Nenhuma melhoria V1.0 está
 marcada como concluída. NPC de evolução ainda não iniciado.
 
@@ -117,3 +117,18 @@ Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou sa
   restaurar original verificado como artifacts/baseline/heartgold.nds; aplicar tm-wip.xdelta
   ao original para artifacts/tm-wip/heartgold.nds; conferir hashes acima. Não recompilar
   por rotina: os caches preservam os dados necessários aos testes atuais.
+
+## Testes ARM registrados — 08/11/2026
+- Executado python3 scripts/validate_tm.py arm com saída 0; relatórios preservados
+  em docs/arm-tests.json e docs/validation-arm.json. Nenhuma recompilação.
+- Dependência Unicorn 2.1.4 instalada em .work/python; pyelftools 0.32 já presente.
+- Baseline: 12 casos (quantidades 1/2/99 x quatro espaços) consumiram 1 TM.
+- Modificada: mesmos 12 casos mantiveram a quantidade. Mais 20 chamadas repetidas
+  mantiveram a única TM. Cenários HM Cut e aprendizagem sem item passaram nas duas.
+- Escritas de movimento, reset de PP Ups e PP conferidas nas chamadas interceptadas.
+- Limitação: serviços externos de Pokémon, PP, classificação de item/HM e amizade
+  simulados. Não prova compatibilidade de espécies, interface, cancelamento ou saves.
+- Nenhuma mudança no código do jogo neste bloco. TMs permanecem WIP.
+- Próximo bloco curto: instalar py-desmume 0.0.9 se necessário, executar
+  python3 scripts/validate_tm.py boot e inspecionar artifacts/tm-wip/title.png.
+  Registrar resultado antes de iniciar testes de ensino pelas telas do jogo.

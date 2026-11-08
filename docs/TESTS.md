@@ -47,3 +47,9 @@ validate_tm.py binary retornou 0. Código residente: um byte 1->0 em 0x020825aa.
 Mapa de 33952 símbolos de funções preservado. Rodapé estático preservado; regiões
 fora de ARM9/rodapé/cabeçalho idênticas. Mudanças de cabeçalho limitadas a tamanho
 ARM9 e CRC. Ver binary-comparison.json e validation-binary.json. Gameplay pendente.
+
+## Testes ARM executados nesta retomada — 08/11/2026
+validate_tm.py arm retornou 0: 12 cenários na baseline, 12 na modificada, repetição
+20x na modificada, HM Cut e aprendizagem sem item nas duas versões. Ver arm-tests.json
+(serviços externos simulados) e validation-arm.json. Interface, compatibilidade de
+espécies, cancelamento e salvar/carregar continuam pendentes. Sem recompilação.
