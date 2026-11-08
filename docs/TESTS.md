@@ -58,3 +58,8 @@ espécies, cancelamento e salvar/carregar continuam pendentes. Sem recompilaçã
 validate_tm.py boot retornou 0 após 1800 frames. Imagem inspecionada: tela de título
 HeartGold com Ho-Oh e TOUCH TO START. Hash da ROM modificado conferido. Relatório:
 validation-boot.json. Não constitui validação completa de TMs ou salvamento.
+
+## Teste real pela interface e persistência — 08/11/2026
+Chikorita inicial recebeu Protect em espaço livre; bolsa com uma TM manteve x1.
+Save pelo jogo, fechamento/reabertura sem savestate e Continue: movimento 10/10
+no resumo e TM x1 na bolsa preservados. Ver UI-TESTS.md. Outros cenários pendentes.

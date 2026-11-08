@@ -146,3 +146,23 @@ Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou sa
   introdução após reinícios. Depois testar TMs pelos menus e salvar/reabrir.
 - Usuário não precisa operar ferramentas ou programar; os próximos blocos também
   são responsabilidade do agente, respeitando pedidos de economia de créditos.
+
+## Primeiro teste de TM pela interface e save/load — 08/11/2026
+- Recebido Chikorita nível 5 pelo evento original de Elm, personagem A.
+- Save normal feito e reaberto pela opção Continue, sem carregar estado rápido.
+- Uma TM17 Protect inserida somente na bolsa de QA em RAM; dados do Pokémon
+  preservados. Ensino pelo menu normal: CHIKORITA learned Protect! Bolsa x1.
+- Salvar após ensino, fechar/reabrir ROM e Continue: bolsa x1 e resumo com
+  Tackle 35/35, Growl 40/40, Protect 10/10. Teste de espaço livre e persistência passou.
+- Evidências e saves privados preservados em HeartGold_TM_UI_Checkpoint_1.zip,
+  Library ID libfile_c7a6715e51bc8191a9e0d8a4afcb4cfd. ZIP/manifest SHA-256 verificados.
+  NÃO versionar/distribuir este cache. Inclui test.sav (pós-ensino), starter.dst
+  (pré-TM), latest.dst e cinco capturas de evidência, além da captura corrente.
+- Adicionado scripts/ui_session.py para retomada com hash de ROM conferido e
+  controles interativos. Sintaxe Python aprovada; operações equivalentes executadas
+  no console desta sessão. Não é um menu Debug dentro do jogo.
+- Procedimento e limitações em docs/UI-TESTS.md. Sem recompilação ou mudança da ROM.
+- TMs continuam WIP. Próximo bloco: testar substituição com quatro movimentos,
+  cancelamento, incompatibilidade e aprendizagem já conhecida; depois regressões
+  de HM/consumíveis. Recuperar cache privado e continuar, sem repetir introdução.
+- O agente executará os próximos testes; nenhuma ação técnica exigida do usuário.
