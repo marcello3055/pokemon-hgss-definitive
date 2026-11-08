@@ -53,3 +53,8 @@ validate_tm.py arm retornou 0: 12 cenários na baseline, 12 na modificada, repet
 20x na modificada, HM Cut e aprendizagem sem item nas duas versões. Ver arm-tests.json
 (serviços externos simulados) e validation-arm.json. Interface, compatibilidade de
 espécies, cancelamento e salvar/carregar continuam pendentes. Sem recompilação.
+
+## Inicialização da ROM modificada — 08/11/2026
+validate_tm.py boot retornou 0 após 1800 frames. Imagem inspecionada: tela de título
+HeartGold com Ho-Oh e TOUCH TO START. Hash da ROM modificado conferido. Relatório:
+validation-boot.json. Não constitui validação completa de TMs ou salvamento.

@@ -132,3 +132,17 @@ Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou sa
 - Próximo bloco curto: instalar py-desmume 0.0.9 se necessário, executar
   python3 scripts/validate_tm.py boot e inspecionar artifacts/tm-wip/title.png.
   Registrar resultado antes de iniciar testes de ensino pelas telas do jogo.
+
+## ROM modificada inicializada no emulador — 08/11/2026
+- Executado validate_tm.py boot, saída 0, 1800 frames com py-desmume 0.0.9.
+- Inspeção visual confirmou título HeartGold, Ho-Oh e TOUCH TO START; duas telas
+  renderizadas. ROM testada SHA-1 34f3068802d836309eeb6da01460f9e32b26ad4d.
+- Relatório em docs/validation-boot.json. Captura preservada fora do GitHub:
+  HeartGold_TM_Boot_Verified.png, Library ID libfile_80b6f400fc7c819197f0036aed049922.
+- Sem recompilação ou alteração da ROM. TMs ainda WIP: inicialização não comprova
+  aprendizagem pela interface, compatibilidade, cancelamento ou save/load.
+- Próximo bloco, executado pelo agente: preparar partida de teste na ROM modificada
+  e chegar ao primeiro Pokémon. Preservar estado/saves privados para não repetir a
+  introdução após reinícios. Depois testar TMs pelos menus e salvar/reabrir.
+- Usuário não precisa operar ferramentas ou programar; os próximos blocos também
+  são responsabilidade do agente, respeitando pedidos de economia de créditos.

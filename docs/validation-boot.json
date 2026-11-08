@@ -1,0 +1,14 @@
+{
+  "stage": "boot",
+  "time_utc": "2026-11-08T16:10:37.547598+00:00",
+  "status": "title_screen_visually_verified",
+  "ui_and_save_validation": "pending",
+  "returncode": 0,
+  "rom_sha1": "34f3068802d836309eeb6da01460f9e32b26ad4d",
+  "emulator": "DeSmuME via py-desmume 0.0.9",
+  "frames": 1800,
+  "image_sha256": "56addf65abecafcfb6da00ec3663073f976bc573ece58589cb55767dfb355443",
+  "image_library_id": "libfile_80b6f400fc7c819197f0036aed049922",
+  "visual_review": "HeartGold title screen, Ho-Oh and TOUCH TO START visible; both screens rendered.",
+  "limitations": "Boot only. TM menu interactions and save/load not tested."
+}
