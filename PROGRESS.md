@@ -73,3 +73,18 @@ Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou sa
 - Nenhuma recompilação ou nova validação de gameplay neste bloco.
 - Próximo bloco: reconstruir somente baseline e salvar resultado sanitizado. Depois,
   reconstruir tm-wip; executar cada etapa de validação e registrar imediatamente.
+
+## Baseline reconstruída e preservada — 08/11/2026
+- scripts/build.sh baseline terminou com código 0 nesta execução.
+- Quatro testes de checksum OK; ROM 134217728 bytes e SHA-1 esperado.
+- Relatório observado: docs/baseline-validation.json. Emulador não executado neste bloco.
+- Dados privados de comparação (main.nef e main.sbin) guardados fora do GitHub em
+  HeartGold_Baseline_Private_Test_Cache.zip, Library ID
+  libfile_a74f8b46c86c8191a48daf5ebd6b5c4f. ZIP e SHA-256 internos verificados.
+  Este cache contém dados derivados do jogo: NÃO enviar ao GitHub nem distribuir.
+- Se houver reinício, recuperar esse cache e conferir manifest.json. Recolocar os
+  dois arquivos em .work/baseline/build/heartgold.us/. A ROM baseline é idêntica à
+  original fornecida: recuperar o ZIP original já existente e conferir SHA-1 antes
+  de usá-la como artifacts/baseline/heartgold.nds. Isso evita recompilar baseline.
+- Próximo bloco: compilar somente tm-wip, registrar o resultado e guardar seu cache
+  privado antes de iniciar a comparação binária. Não reexecutar baseline sem motivo.

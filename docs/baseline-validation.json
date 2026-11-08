@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-11-08T11:16:15.101861+00:00",
+  "build_exit_code": 0,
+  "rom_sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+  "rom_bytes": 134217728,
+  "matches_expected_original": true,
+  "tests": [
+    {
+      "name": "pokeheartgold:HEARTGOLD Main Checksums",
+      "result": "OK"
+    },
+    {
+      "name": "pokeheartgold:HEARTGOLD Sub Checksums",
+      "result": "OK"
+    },
+    {
+      "name": "pokeheartgold:HEARTGOLD Filesystem Checksums",
+      "result": "OK"
+    },
+    {
+      "name": "pokeheartgold:HEARTGOLD ROM Checksum",
+      "result": "OK"
+    }
+  ],
+  "emulator_this_block": "not_run",
+  "modified_rom_this_block": "not_built"
+}

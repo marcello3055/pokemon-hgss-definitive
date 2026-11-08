@@ -37,3 +37,7 @@ Pokémon/PP/metadados/amizade simulados, bolsa executada em código ARM real.
 Comparador iniciado mas resultado não observado. UI de TMs, save/load modificado
 e patch binário pendentes. Binários e logs perdidos; scripts reconstituídos e
 sintaxe verificada na retomada, sem repetir compilação para economizar créditos.
+
+## Baseline observada nesta execução (08/11/2026)
+Ver docs/baseline-validation.json: quatro checksums OK, build exit 0, tamanho e
+SHA-1 da ROM iguais ao esperado. Nenhum novo teste de gameplay neste bloco.
