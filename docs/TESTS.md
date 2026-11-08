@@ -41,3 +41,9 @@ sintaxe verificada na retomada, sem repetir compilação para economizar crédit
 ## Baseline observada nesta execução (08/11/2026)
 Ver docs/baseline-validation.json: quatro checksums OK, build exit 0, tamanho e
 SHA-1 da ROM iguais ao esperado. Nenhum novo teste de gameplay neste bloco.
+
+## Comparação binária executada — 08/11/2026
+validate_tm.py binary retornou 0. Código residente: um byte 1->0 em 0x020825aa.
+Mapa de 33952 símbolos de funções preservado. Rodapé estático preservado; regiões
+fora de ARM9/rodapé/cabeçalho idênticas. Mudanças de cabeçalho limitadas a tamanho
+ARM9 e CRC. Ver binary-comparison.json e validation-binary.json. Gameplay pendente.

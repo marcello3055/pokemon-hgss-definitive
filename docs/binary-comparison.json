@@ -1,0 +1,24 @@
+{
+  "resident_code_differences": [
+    {
+      "address": "0x20825aa",
+      "before": 1,
+      "after": 0
+    }
+  ],
+  "function_layout_equal": true,
+  "function_symbols_compared": 33952,
+  "baseline_sha1": "4fcded0e2713dc03929845de631d0932ea2b5a37",
+  "modified_sha1": "34f3068802d836309eeb6da01460f9e32b26ad4d",
+  "rom_differing_bytes": 685474,
+  "rom_size": 134217728,
+  "baseline_arm9_size": 762644,
+  "modified_arm9_size": 762648,
+  "static_footer_preserved": true,
+  "unrelated_rom_regions_identical": true,
+  "header_changed_offsets": [
+    "0x2c",
+    "0x15e",
+    "0x15f"
+  ]
+}

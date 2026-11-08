@@ -5,8 +5,9 @@ Base: HeartGold US em inglês; pret/pokeheartgold fixado em upstream.lock.json.
 Repositório privado: https://github.com/marcello3055/pokemon-hgss-definitive
 Acesso de leitura e escrita confirmado. Primeiro envio remoto: d5bd81fdd8583ccf03080dc856db3e8a170bb65e.
 
-TMs infinitas: compilação e testes de rotinas ARM passaram na execução anterior;
-ainda WIP, sem validação completa pela interface. Nenhuma melhoria V1.0 está
+TMs infinitas: compilação e recuperação do patch confirmadas; comparação binária
+aprovada em 08/11/2026. Testes ARM anteriores passaram (histórico). Ainda WIP,
+sem validação completa pela interface. Nenhuma melhoria V1.0 está
 marcada como concluída. NPC de evolução ainda não iniciado.
 
 ## Resultados observados antes do novo reinício do ambiente
@@ -88,3 +89,31 @@ Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou sa
   de usá-la como artifacts/baseline/heartgold.nds. Isso evita recompilar baseline.
 - Próximo bloco: compilar somente tm-wip, registrar o resultado e guardar seu cache
   privado antes de iniciar a comparação binária. Não reexecutar baseline sem motivo.
+
+## Versão TM recuperada e comparação aprovada — 08/11/2026
+- Build tm-wip anterior terminou com código 0; relatório recuperado do cache em
+  docs/tm-build-validation.json. Patch xdelta de 321673 bytes teve reaplicação exata.
+- Cache privado salvo: HeartGold_TM_WIP_Private_Test_Cache.zip, Library ID
+  libfile_ce763427d94c8191868765e786b836fd. Contém main.nef, main.sbin, tm-wip.xdelta,
+  manifest.json e validation.json. NÃO versionar ou distribuir dados do cache.
+- Novo reinício removeu arquivos temporários. Recuperados os dois caches privados,
+  conferidos seus SHA-256 e restaurada a base a partir do ZIP original fornecido.
+  A ROM modificada foi recuperada por xdelta, sem recompilar nenhuma variante.
+- SHA-1 modificado confirmado: 34f3068802d836309eeb6da01460f9e32b26ad4d.
+- Executado validate_tm.py binary: aprovado. Relatórios em docs/binary-comparison.json
+  e docs/validation-binary.json. Única diferença no main.sbin: endereço 0x020825aa,
+  byte 1 -> 0, dentro de PartyMenu_LearnMoveToSlot. 33952 símbolos de função comparados,
+  com mesmos endereços e tamanhos (mapa por nome do comparador).
+- ARM9 compactado passou de 762644 para 762648 bytes; rodapé NitroSDK de 12 bytes
+  permanece idêntico, deslocado com o tamanho. Fora da região ARM9 + rodapé e do
+  cabeçalho, ROM idêntica. Cabeçalho só mudou tamanho ARM9 e CRC.
+- Comparador ampliado para verificar regiões não relacionadas e rodapé. Durante a
+  investigação, comparação de caudas deslocadas produziu contagem inválida; corrigida
+  para offsets absolutos. Só os relatórios finais aprovados foram versionados.
+- Este bloco NÃO executou ARM novamente nem emulador. Próximo bloco curto: executar
+  validate_tm.py arm usando arquivos recuperados e guardar relatório. Em bloco posterior,
+  abrir modificada no emulador e testar interface/save antes de declarar TMs concluídas.
+- Para retomar após reinício: restaurar NEF/SBIN de cada cache em .work/VARIANTE/build/heartgold.us;
+  restaurar original verificado como artifacts/baseline/heartgold.nds; aplicar tm-wip.xdelta
+  ao original para artifacts/tm-wip/heartgold.nds; conferir hashes acima. Não recompilar
+  por rotina: os caches preservam os dados necessários aos testes atuais.
