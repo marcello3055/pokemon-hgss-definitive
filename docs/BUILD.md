@@ -78,3 +78,17 @@ só cobre código residente e endereços/tamanhos de funções; não valida game
 Não versionar logs brutos de Meson: podem conter variáveis de ambiente. Registrar
 somente resultados sanitizados. Testes ARM simulam serviços externos e não
 substituem validação pela interface e salvamento.
+
+## Validação em etapas pequenas
+Após compilar as duas variantes, executar separadamente, nesta ordem:
+
+    python3 scripts/validate_tm.py preflight
+    python3 scripts/validate_tm.py binary
+    python3 scripts/validate_tm.py arm
+    python3 scripts/validate_tm.py boot
+
+Cada comando grava atomicamente seu próprio validation-ETAPA.json em artifacts/tm-wip.
+Inspecionar e enviar cada relatório sanitizado ao GitHub antes de avançar. Um JSON
+local não é backup remoto. O comando boot exige inspeção visual posterior; nenhum
+comando declara validação da interface ou dos saves. A etapa preflight só verifica
+presença, não integridade dos arquivos. Scripts não consultam saldo de créditos.

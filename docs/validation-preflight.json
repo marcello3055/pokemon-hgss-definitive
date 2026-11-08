@@ -1,0 +1,14 @@
+{
+  "stage": "preflight",
+  "time_utc": "2026-11-08T11:02:29.320142+00:00",
+  "status": "blocked",
+  "ui_and_save_validation": "pending",
+  "missing": [
+    ".work/baseline/build/heartgold.us/main.nef",
+    ".work/tm-wip/build/heartgold.us/main.nef",
+    ".work/baseline/build/heartgold.us/main.sbin",
+    ".work/tm-wip/build/heartgold.us/main.sbin",
+    "artifacts/baseline/heartgold.nds",
+    "artifacts/tm-wip/heartgold.nds"
+  ]
+}

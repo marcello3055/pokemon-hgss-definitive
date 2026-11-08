@@ -63,3 +63,13 @@ exclusivos de versão, HMs sem ensino, eventos pós-Red, escolhas exclusivas,
 Alph e Hard Mode ainda não implementados. Debug/Release ainda não separados.
 Lista/requisitos de Alph e equipes Hard Mode dependem de aprovação futura.
 Nuzlocke fora do escopo. Não publicar ROM, assets, SDK, BIOS, ferramentas ou saves.
+
+## Bloco pequeno concluído — 08/11/2026
+- Remoto abe482a conferido; arquivos locais íntegros e dependências locais presentes.
+- Criado scripts/validate_tm.py, com etapas independentes e relatórios atômicos.
+- Preflight executado: bloqueio esperado, seis arquivos compilados ausentes;
+  resultado em docs/validation-preflight.json. Sintaxe Python e conteúdo do relatório
+  verificados. Etapas binary/arm/boot do novo executor ainda não exercitadas.
+- Nenhuma recompilação ou nova validação de gameplay neste bloco.
+- Próximo bloco: reconstruir somente baseline e salvar resultado sanitizado. Depois,
+  reconstruir tm-wip; executar cada etapa de validação e registrar imediatamente.
