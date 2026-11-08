@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "results": [
+    {
+      "test": "Python syntax",
+      "status": "passed"
+    },
+    {
+      "test": "Bash syntax",
+      "status": "passed"
+    },
+    {
+      "test": "Patch applies and reverses against pinned upstream source",
+      "status": "passed",
+      "note": "Does not validate ROM behavior"
+    },
+    {
+      "test": "Verifier rejects bad input without modification or backup",
+      "status": "passed"
+    },
+    {
+      "test": "Audit rejects ROM extension, token pattern, binary and oversized file",
+      "status": "passed"
+    }
+  ],
+  "full_rebuild_this_recovery": "not_run"
+}
