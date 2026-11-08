@@ -21,3 +21,7 @@
 13. O usuário não programa: explicar qualquer ação indispensável em passos simples e exatos.
 14. Antes de encerrar: progresso, testes, commit, bundle verificado e cópia durável.
     Commit local sozinho não protege de reinício do ambiente.
+
+15. Economia de créditos: saldo/custo não disponíveis. Usar blocos pequenos; enviar
+    scripts antes de compilar e registrar resultados sanitizados imediatamente após
+    cada marco. Não esperar toda uma funcionalidade para fazer checkpoint remoto.

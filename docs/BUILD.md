@@ -63,3 +63,18 @@ python3 scripts/checkpoint.py /caminho/fora-do-repo/checkpoint.zip
 O script exige árvore limpa, audita histórico, verifica bundle e faz clone de teste.
 O ZIP deve então ser salvo em armazenamento persistente ou enviado ao remoto autorizado.
 Sem essa última operação, um commit local pode desaparecer num reinício.
+
+## Correção Ninja e testes ARM (08/11/2026)
+Meson espera NINJA como caminho executável, sem argumentos embutidos.
+O wrapper criado por build.sh limita a quatro tarefas. Duas builds passaram com
+esta correção antes do reinício; código reconstituído do histórico da execução.
+
+python3 -m pip install --target .work/python unicorn==2.1.4 pyelftools==0.32
+PYTHONPATH=.work/python python3 scripts/test_tm_arm.py .work/baseline/build/heartgold.us/main.nef .work/tm-wip/build/heartgold.us/main.nef artifacts/tm-wip/arm-tests.json
+PYTHONPATH=.work/python python3 scripts/compare_tm_builds.py .work/baseline/build/heartgold.us/main.nef .work/tm-wip/build/heartgold.us/main.nef artifacts/baseline/heartgold.nds artifacts/tm-wip/heartgold.nds artifacts/tm-wip/binary-comparison.json
+
+NEF contém símbolos; main.sbin contém o código residente a executar. O comparador
+só cobre código residente e endereços/tamanhos de funções; não valida gameplay.
+Não versionar logs brutos de Meson: podem conter variáveis de ambiente. Registrar
+somente resultados sanitizados. Testes ARM simulam serviços externos e não
+substituem validação pela interface e salvamento.

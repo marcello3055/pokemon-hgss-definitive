@@ -27,3 +27,13 @@ A alteração passa quantidade zero a Bag_TakeItem apenas no aprendizado TM/HM.
 O código original de Bag_TakeItem subtrai a quantidade e compacta o bolso.
 Isso sustenta a hipótese, mas não substitui teste de integração.
 Preservar offsets deve ser demonstrado por comparação, não presumido.
+
+## Evidência histórica adicional — 08/11/2026
+Antes do novo reinício: baseline make exit 0; 4 testes OK / 0 falhas; SHA-1 correto;
+cmp original/baseline sem diferenças; título baseline inspecionado no DeSmuME.
+Build tm-wip exit 0. test_tm_arm.py passou para baseline e modificada: 12 cenários
+por build, repetição 20x na modificada, HM e aprendizagem sem item. Dados de
+Pokémon/PP/metadados/amizade simulados, bolsa executada em código ARM real.
+Comparador iniciado mas resultado não observado. UI de TMs, save/load modificado
+e patch binário pendentes. Binários e logs perdidos; scripts reconstituídos e
+sintaxe verificada na retomada, sem repetir compilação para economizar créditos.
